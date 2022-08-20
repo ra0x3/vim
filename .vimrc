@@ -159,12 +159,10 @@ let g:buffet_show_index = 1
 set guifont=Monaco:h12
 
 " https://github.com/fatih/vim-go/issues/3171#issuecomment-804548360
-set re=2
-
+"set re=2
 " https://prettier.io/docs/en/vim.html
-let g:neoformat_try_node_exe = 1
-
-autocmd BufWritePre *.{tsx,js} Neoformat
+"let g:neoformat_try_node_exe = 1
+"autocmd BufWritePre *.{tsx,js} Neoformat
 
 " https://github.com/sonph/onehalf/tree/master/vim
 syntax on
