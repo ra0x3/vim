@@ -168,7 +168,14 @@ set guifont=Monaco:h12
 syntax on
 set t_Co=256
 set cursorline
+set number
 colorscheme onehalfdark
 let g:airline_theme='onehalfdark'
 " lightline
 " let g:lightline = { 'colorscheme': 'onehalfdark' }
+"
+set colorcolumn=80
+
+let NERDTreeMapOpenInTab='\r'
+
+au VimEnter *  NERDTree | wincmd p
