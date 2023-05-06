@@ -116,7 +116,7 @@ call plug#begin()
   Plug 'sheerun/vim-polyglot'
   Plug 'koryschneider/vim-trim'
   Plug 'dense-analysis/ale'
-  Plug 'rust-lang/rust.vim'
+  "Plug 'rust-lang/rust.vim'
   Plug 'prabirshrestha/async.vim'
   Plug 'prabirshrestha/vim-lsp'
   Plug 'prabirshrestha/asyncomplete.vim'
@@ -137,10 +137,10 @@ let g:ale_completion_enabled = 1
 
 nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
 
-let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
+" let g:ale_fixers = { 'rust': ['rustfmt', 'trim_whitespace', 'remove_trailing_lines'] }
 
 " Required, explicitly enable Elixir LS
-let g:ale_linters = { 'rust': ['analyzer'] }
+" let g:ale_linters = { 'rust': ['analyzer'] }
 
 " You can use Ag with ack.vim by adding the following line to your .vimrc
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -179,3 +179,6 @@ set colorcolumn=80
 let NERDTreeMapOpenInTab='\r'
 
 au VimEnter *  NERDTree | wincmd p
+
+" Close nerdtree when all tabs close
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
