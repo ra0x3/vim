@@ -185,3 +185,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " https://vi.stackexchange.com/a/28721
 set re=2
+
+set mouse=a
+set scrolloff=5   " Keeps 5 lines above and below when scrolling
+set lazyredraw    " Optimizes redrawing for smooth scrolling
