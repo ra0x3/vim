@@ -22,7 +22,7 @@ set nojoinspaces " no extra space after '.' when joining lines
 set shiftwidth=8 " set indentation depth to 8 columns
 set softtabstop=8 " backspacing over 8 spaces like over tabs
 set tabstop=8 " set tabulator length to 8 columns
-set textwidth=80 " wrap lines automatically at 80th column
+"set textwidth=80 " wrap lines automatically at 80th column
 
 " search settings
 set hlsearch " highlight search results
@@ -182,3 +182,6 @@ au VimEnter *  NERDTree | wincmd p
 
 " Close nerdtree when all tabs close
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" https://vi.stackexchange.com/a/28721
+set re=2
